@@ -1,0 +1,28 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class Q2Test {
+
+    @Test
+    public void testEvaluateExpressions() {
+        String expression1 = "2 * 4 * 4";
+        String expected1 = "32";
+        String result1 = Q2.evaluateExpression(expression1);
+        Assertions.assertEquals(expected1, result1);
+
+        String expression2 = "5 / (7 - 5)";
+        String expected2 = "2.5";
+        String result2 = Q2.evaluateExpression(expression2);
+        Assertions.assertEquals(expected2, result2);
+
+        String expression3 = "sqrt(5^2 - 4^2)";
+        String expected3 = "3";
+        String result3 = Q2.evaluateExpression(expression3);
+        Assertions.assertEquals(expected3, result3);
+
+        String expression4 = "sqrt(-3^2 - 4^2)";
+        String expected4 = "5i";
+        String result4 = Q2.evaluateExpression(expression4);
+        Assertions.assertEquals(expected4, result4);
+    }
+}

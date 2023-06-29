@@ -1,0 +1,29 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Q1DiceTest {
+
+    @Test
+    public void testSimulateRolls() {
+        Map<Integer, Integer> expectedOccurrences = new HashMap<>();
+        expectedOccurrences.put(2, 3);
+        expectedOccurrences.put(3, 4);
+        expectedOccurrences.put(4, 8);
+        expectedOccurrences.put(5, 12);
+        expectedOccurrences.put(6, 16);
+        expectedOccurrences.put(7, 17);
+        expectedOccurrences.put(8, 14);
+        expectedOccurrences.put(9, 11);
+        expectedOccurrences.put(10, 8);
+        expectedOccurrences.put(11, 5);
+        expectedOccurrences.put(12, 2);
+
+        Map<Integer, Integer> actualOccurrences = Q1Dice.simulateRolls();
+
+        Assertions.assertEquals(expectedOccurrences, actualOccurrences);
+    }
+
+}
